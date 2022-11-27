@@ -6,8 +6,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UsersService {
 
-  private url = 'http://127.0.0.1:5011/users';     // localhost
-  // private url = 'http://3.239.185.214:5011/users';   // aws
+  // private url = 'http://127.0.0.1:5011/users';     // localhost
+  private url = 'http://54.161.39.167:5011';
 
   constructor(private httpClient: HttpClient) { }
 

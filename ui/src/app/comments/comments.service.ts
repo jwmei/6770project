@@ -4,7 +4,8 @@ import { Comment } from '../models/comment.model';
 
 @Injectable()
 export class CommentsService {
-  private url = 'http://127.0.0.1:5011';
+  // private url = 'http://127.0.0.1:5011';
+  private url = 'http://54.161.39.167:5011';
 
   constructor(private http: HttpClient) {}
 
