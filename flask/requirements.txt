@@ -2,7 +2,6 @@ Flask-JWT
 Flask-RESTful
 Flask-SQLAlchemy
 pymysql
-flask-mysqldb
 certifi==2022.6.15.1
 charset-normalizer==2.1.1
 click==8.1.3
