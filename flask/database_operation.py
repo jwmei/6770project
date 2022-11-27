@@ -1,8 +1,6 @@
 import pymysql
 from flask import Flask, Response, request
 import json
-from flask_mysqldb import MySQL
-import os
 
 
 class DatabaseOperations:
