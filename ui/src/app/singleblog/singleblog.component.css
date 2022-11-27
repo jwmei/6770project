@@ -983,7 +983,6 @@ blockquote {
 .font-size-article-header{
     font-size: 1.9em;
     line-height: 1.6;
-    color: #858585;
 }
 .font-size-sm{
     font-size: 13px;
@@ -1272,18 +1271,13 @@ blockquote {
     padding: 10px 20px 0;
 }
 
-.article-meta{
-    text-align: center;
-    color: #DDDDDD;
-    font-size: 13px;
-    margin-bottom: 30px;
-}
+
 .article-body{
     padding: 20px;
 }
 .article-meta {
     text-align: center;
-    color: #DDDDDD;
+    color: #858585;
     font-size: 13px;
     margin-bottom: 30px;
 }
