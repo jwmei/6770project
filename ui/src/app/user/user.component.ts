@@ -35,7 +35,8 @@ export class UserComponent implements OnInit {
     // get user by username
     if (url.includes('users/')) {
       this.service.getUserByUsername(url.split('users/')[1]).subscribe((response: any) => {
-        this.users = response;
+        this.users = [response];
+        console.log(this.users);
       });
     }
     else if (url.includes('users?')) {
