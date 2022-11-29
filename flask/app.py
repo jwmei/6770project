@@ -47,7 +47,7 @@ def users():
     return response
 
 
-@app.route("/<string:username>", methods=["GET"])
+@app.route("/users/<string:username>", methods=["GET"])
 def get_user_by_username(username):
     result = UsersResource.get_user_by_username(username)
 

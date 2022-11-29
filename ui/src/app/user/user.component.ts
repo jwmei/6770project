@@ -35,7 +35,7 @@ export class UserComponent implements OnInit {
     // get user by username
     if (url.includes('users/')) {
       this.service.getUserByUsername(url.split('users/')[1]).subscribe((response: any) => {
-        this.users = [response];
+        this.users = response;
       });
     }
     else if (url.includes('users?')) {
@@ -56,7 +56,7 @@ export class UserComponent implements OnInit {
 
   // search users w/ given information
   searchUser() {
-    let username = this.searchUserForm.controls['username'].value;
+    var username = this.searchUserForm.controls['username'].value;
     var email = this.searchUserForm.controls['email'].value;
 
     // search by username

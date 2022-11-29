@@ -17,7 +17,7 @@ export class AppComponent {
         if (event.url.includes("?")) {
           this.activePath = 'query';
         } else {
-          this.activePath = event.url.split('/')[1] || 'home';
+          this.activePath = event.url.split('/')[2];
         }
         this.activePage = this.activePath + '-page';
       }
