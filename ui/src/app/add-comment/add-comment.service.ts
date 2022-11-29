@@ -6,7 +6,7 @@ import { Comment } from '../models/comment.model';
 export class AddCommentService {
 
     // private url = 'http://127.0.0.1:5011';
-    private url = 'http://54.161.39.167:5011';
+    private url = 'http://3.82.19.253:5011';
  
     constructor(private http: HttpClient){
  

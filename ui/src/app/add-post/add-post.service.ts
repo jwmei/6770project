@@ -11,7 +11,7 @@ export class AddPostService {
   // observable --> http object: header object
   addPost(title: string, description: string, username: string){
     // return this.http.post('http://127.0.0.1:5011/' + username + '/addpost',{
-    return this.http.post('http://54.161.39.167:5011/' + username + '/addpost',{
+    return this.http.post('http://3.82.19.253:5011/' + username + '/addpost',{
       title : title,
       description : description,
     })
