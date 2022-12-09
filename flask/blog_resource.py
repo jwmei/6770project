@@ -12,8 +12,8 @@ class BlogResource:
     def _get_connection():
 
         usr = "root"
-        pw = "84443295412lx."
-        h = "db6770.c4qfxod7s5ol.us-east-1.rds.amazonaws.com"
+        pw = "Oracle1."
+        h = "localhost"
 
         conn = pymysql.connect(
             user=usr,
@@ -74,6 +74,13 @@ class BlogResource:
         except:
             return None
         result = cur.fetchall()
+
+    # get # of comments under a perticular blog, call func from commentdb
+        for each in result:
+            blog_id = each['blog_id']
+            num = CommentResource.get_comments_number(blog_id)
+            each["comment_num"] = num
+
         return result
 
 

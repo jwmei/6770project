@@ -17,7 +17,7 @@ app = Flask(__name__)
 
 CORS(app)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:84443295412lx.@db6770.c4qfxod7s5ol.us-east-1.rds.amazonaws.com/commentdb'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:Oracle1.@localhost/commentdb'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['PROPAGATE_EXCEPTIONS'] = True
 app.secret_key = 'yanbing'  # app.config['JWT_SECRET_KEY']
@@ -64,6 +64,16 @@ def get_user_by_username(username):
 def get_user_by_id(id):
     result = UsersResource.get_user_by_id(id)
 
+    if result:
+        response = Response(json.dumps(result, default=str), status=200, content_type="application/json")
+    else:
+        response = Response("404 NOT FOUND", status=404, content_type="application/json")
+    return response
+
+
+@app.route("/<username>", methods=["GET"])
+def get_firstname_and_lastname(username):
+    result = UsersResource.get_user_by_username(username)
     if result:
         response = Response(json.dumps(result, default=str), status=200, content_type="application/json")
     else:

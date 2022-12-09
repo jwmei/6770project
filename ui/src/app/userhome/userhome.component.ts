@@ -28,6 +28,7 @@ export class UserHomeComponent {
   
     showUserInfo() {
       this.username = this.url.split("/")[1];
+      console.log("usernam is:", this.username);
       this.userhomeservice.getUserInfo(this.username).subscribe((res: any) => {
         this.userInfo = res;
         console.log("result: ", res)

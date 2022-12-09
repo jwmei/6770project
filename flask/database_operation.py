@@ -12,8 +12,8 @@ class DatabaseOperations:
     def _get_connection():
 
         usr = "root"
-        pw = "84443295412lx."
-        h = "db6770.c4qfxod7s5ol.us-east-1.rds.amazonaws.com"
+        pw = "Oracle1."
+        h = "localhost"
 
         conn = pymysql.connect(
             user=usr,
