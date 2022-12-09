@@ -12,7 +12,7 @@ class UsersResource:
 
         usr = "root"
         pw = "Oracle1."
-        h = "localhost"
+        h = "database6770.cvlavt0m8fg8.us-east-1.rds.amazonaws.com"
 
         conn = pymysql.connect(
             user=usr,
