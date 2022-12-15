@@ -94,12 +94,6 @@ def check_user_login():
         return result
 
 
-# logout service
-@app.route('/logout')
-def logout():
-    return redirect(url_for('login'))
-
-
 # register service
 @app.route('/register', methods=["POST"])
 def user_registration():
