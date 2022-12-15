@@ -10,8 +10,8 @@ export class LoginService {
 	}
 
 	validateLogin(user: User){
-		return this.http.post('http://127.0.0.1:5011/login',{
-		// return this.http.post('http://3.82.19.253:5011/login',{
+		// return this.http.post('http://127.0.0.1:5011/login',{
+		return this.http.post('http://54.226.205.228:5011/login',{
 			username : user.username,
 			password : user.password
 		})

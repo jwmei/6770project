@@ -4,19 +4,18 @@ import { Comment } from '../models/comment.model';
 
 @Injectable()
 export class AddCommentService {
+  // private url = 'http://127.0.0.1:5011';
+  private url = 'http://54.226.205.228:5011';
 
-    private url = 'http://127.0.0.1:5011';
-    // private url = 'http://3.82.19.253:5011';
- 
-    constructor(private http: HttpClient){
- 
-    }
-     
-    addComment(user_id: string, blog_id: string, content: string){
-        return this.http.post(this.url + "/" + user_id + "/posts/" + blog_id + "/addcomment",{
-            // blog_id : comment.blog_id,
-            content : content
-        })
-    }
+  constructor(private http: HttpClient) {}
 
+  addComment(user_id: string, blog_id: string, content: string) {
+    return this.http.post(
+      this.url + '/' + user_id + '/posts/' + blog_id + '/addcomment',
+      {
+        // blog_id : comment.blog_id,
+        content: content,
+      }
+    );
+  }
 }
